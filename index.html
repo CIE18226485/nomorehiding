@@ -390,6 +390,41 @@
             .testimonials {
                 grid-template-columns: 1fr;
             }
+            
+            /* Fix pricing section mobile layout */
+            #pricing .container > div:first-of-type {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                max-width: 400px !important;
+                margin: 0 auto !important;
+            }
+            
+            #pricing .pricing-card {
+                transform: scale(1) !important;
+                max-width: 100% !important;
+            }
+            
+            /* Fix bundle details grid mobile layout */
+            #pricing .container > div:last-of-type div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            /* Ensure no horizontal scrolling */
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+                overflow-x: hidden;
+            }
+            
+            /* Fix any grid that might cause horizontal scroll */
+            .content-grid,
+            .target-grid,
+            .contents-grid,
+            .results-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
         }
     </style>
 </head>
