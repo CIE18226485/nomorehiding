@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Wait Another Year - Single Mom Dating Guide</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Countdown Banner */
+        .countdown-banner {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1001;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .countdown-banner .flash {
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.5; }
+        }
+
+        /* Header - REMOVED */
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+            color: white;
+            background: 
+                linear-gradient(135deg, rgba(220, 38, 38, 0.6), rgba(239, 68, 68, 0.5)),
+                url('https://images.pexels.com/photos/8376331/pexels-photo-8376331.jpeg') center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .urgency-badge {
+            background: #fbbf24;
+            color: #1a202c;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 12px rgba(0,0,0,0.9);
+            font-family: 'Georgia', serif;
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fbbf24;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #fbbf24, #f59e0b, #d97706);
+            color: #1a202c;
+            padding: 22px 60px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+            font-family: 'Georgia', serif;
+            border: 3px solid white;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4); }
+            to { box-shadow: 0 15px 40px rgba(251, 191, 36, 0.8); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        /* Scarcity Section */
+        .scarcity-section {
+            background: linear-gradient(135deg, #7c2d12, #9a3412);
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .scarcity-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid #fbbf24;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .scarcity-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #fbbf24;
+        }
+
+        .time-sensitive {
+            background: #dc2626;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+            animation: flash 2s infinite;
+        }
+
+        /* Social Proof Section */
+        .social-proof-section {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            padding: 80px 0;
+            color: white;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #fbbf24;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #fbbf24;
+            font-size: 0.9rem;
+        }
+
+        /* Limited Time Section */
+        .limited-time-section {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .limited-time-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #dc2626;
+            font-family: 'Georgia', serif;
+        }
+
+        .offer-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.2);
+            border: 3px solid #dc2626;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .countdown-item {
+            text-align: center;
+            background: #dc2626;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 60px;
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(135deg, #1a202c, #2d3748);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, #fef3c7, #fbbf24);
+            color: #1a202c;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 50px 40px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 4px solid white;
+            position: relative;
+        }
+
+        .limited-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #dc2626;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            animation: flash 2s infinite;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #dc2626;
+            font-size: 2rem;
+            opacity: 0.7;
+        }
+
+        .sale-price {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #dc2626;
+            margin: 10px 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .savings {
+            background: #dc2626;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 15px 0;
+            border-bottom: 1px solid #f59e0b;
+            font-size: 1.1rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features i {
+            color: #dc2626;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats-row {
+                gap: 20px;
+            }
+            
+            .stat {
+                padding: 15px;
+            }
+            
+            .countdown {
+                gap: 10px;
+            }
+            
+            .countdown-item {
+                padding: 10px;
+                min-width: 50px;
+            }
+            
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Fix pricing section mobile layout */
+            #pricing .container > div:first-of-type {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+                max-width: 400px !important;
+                margin: 0 auto !important;
+            }
+            
+            #pricing .pricing-card {
+                transform: scale(1) !important;
+                max-width: 100% !important;
+            }
+            
+            /* Fix bundle details grid mobile layout */
+            #pricing .container > div:last-of-type div[style*="grid-template-columns: 1fr 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            
+            /* Ensure no horizontal scrolling */
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+                overflow-x: hidden;
+            }
+            
+            /* Fix any grid that might cause horizontal scroll */
+            .content-grid,
+            .target-grid,
+            .contents-grid,
+            .results-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-banner">
+        <span class="flash">⚡ LIMITED TIME: </span> Only 48 hours left at this price - <strong>Save 70% NOW</strong>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="urgency-badge">⏰ ENDING SOON: Limited Time Offer</div>
+            <h1>Don't Waste Another Year Hiding</h1>
+            <p class="subtitle">How long will you keep pretending you don't have kids just to get a second date?</p>
+            
+            <div class="stats-row">
+                <div class="stat">
+                    <span class="stat-number">2,847</span>
+                    <span class="stat-label">Single moms helped</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">89%</span>
+                    <span class="stat-label">Found lasting love</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Average weeks to results</span>
+                </div>
+            </div>
+            
+            <a href="https://nomorehiding.gumroad.com/l/DatingTransformationBundle" class="cta-button">Get 70% Off Now - Only $7</a>
+        </div>
+    </section>
+
+    <section class="scarcity-section">
+        <div class="container">
+            <div class="scarcity-box">
+                <h3>Why I'm Practically Giving This Away</h3>
+                <p>I've been getting hundreds of emails from single moms begging for help. This week only, I'm offering my complete story and strategy for 70% off because I believe every mom deserves love.</p>
+                <div class="time-sensitive">
+                    ⚠️ Price goes back to $25 in 48 hours ⚠️
+                </div>
+                <p><strong>Don't wait.</strong> Your happiness is worth more than $7.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: white;">What Other Moms Are Saying</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"I read Sarah's story at 2 AM after another terrible date. Three weeks later, I met Mark. We're engaged now, and he adores my son."</p>
+                    <div class="testimonial-author">- Jennifer M., Mom of 1</div>
+                </div>
+                <div class="testimonial">
+                    <p>"I was so tired of hiding my daughter. Sarah's approach completely changed my dating life. I'm with someone who loves us both exactly as we are."</p>
+                    <div class="testimonial-author">- Maria L., Mom of 1</div>
+                </div>
+                <div class="testimonial">
+                    <p>"This isn't theory - it's real advice from someone who's lived it. Changed my entire perspective on dating as a single mom."</p>
+                    <div class="testimonial-author">- Ashley K., Mom of 2</div>
+                </div>
+                <div class="testimonial">
+                    <p>"I wish I'd found this sooner. Could have saved myself months of bad dates and low self-esteem. Sarah gets it."</p>
+                    <div class="testimonial-author">- Rachel T., Mom of 1</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="limited-time-section">
+        <div class="container">
+            <h2>This Offer Expires Soon</h2>
+            <div class="offer-box">
+                <h3 style="margin-bottom: 20px; color: #dc2626;">Get Everything for 70% Off</h3>
+                <p style="margin-bottom: 20px; font-size: 1.1rem;">Complete transformation story + dating strategy + bonus scripts</p>
+                
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">47</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">23</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">15</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+                
+                <p style="font-weight: bold; color: #dc2626;">After this timer hits zero, the price goes back to $25</p>
+                <a href="https://nomorehiding.gumroad.com/l/DatingTransformationBundle" class="cta-button" style="margin-top: 20px;">Claim My 70% Discount</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 style="margin-bottom: 40px;">Last Chance - 70% Off</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
+                
+                <!-- Single Guide -->
+                <div class="pricing-card" style="transform: scale(1); max-width: none;">
+                    <div class="limited-badge">⚡ 70% OFF - ENDING SOON</div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: 'Georgia', serif;">Single Mom Dating Guide</h3>
+                    
+                    <div style="margin: 20px 0;">
+                        <span class="original-price" style="font-size: 1.5rem;">$25</span>
+                        <div class="sale-price" style="font-size: 3rem;">$7</div>
+                        <div class="savings">Save $18 Today!</div>
+                    </div>
+                    
+                    <ul class="pricing-features" style="font-size: 0.9rem;">
+                        <li><i class="fas fa-check"></i> Complete story - from hiding to thriving</li>
+                        <li><i class="fas fa-check"></i> Profile rewrite that got results</li>
+                        <li><i class="fas fa-check"></i> 2-hour dating window strategy</li>
+                        <li><i class="fas fa-check"></i> Scripts for mom-shamers</li>
+                        <li><i class="fas fa-check"></i> Instant download - read tonight</li>
+                    </ul>
+                    
+                    <a href="https://nomorehiding.gumroad.com/l/IUsedtoHideMyKidsonDatingAppsCompleteGuide" class="cta-button" style="margin-top: 25px; font-size: 1rem; padding: 15px 30px; background: linear-gradient(45deg, #dc2626, #ef4444); color: white;">Get 70% Off - $7</a>
+                </div>
+
+                <!-- Bundle Option -->
+                <div class="pricing-card" style="transform: scale(1.08); max-width: none; border: 4px solid #fbbf24; position: relative;">
+                    <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: #fbbf24; color: #1a202c; padding: 10px 25px; border-radius: 25px; font-weight: bold; font-size: 1rem; animation: pulse 2s infinite;">🔥 BEST VALUE</div>
+                    
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: 'Georgia', serif;">Complete Transformation Bundle</h3>
+                    
+                    <div style="margin: 20px 0;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+                            <span class="original-price" style="font-size: 1.8rem;">$75</span>
+                            <div class="sale-price" style="font-size: 3rem; margin: 0;">$12</div>
+                        </div>
+                        <div class="savings" style="background: #fbbf24; color: #1a202c;">Save $63 - 84% OFF!</div>
+                    </div>
+                    
+                    <ul class="pricing-features" style="font-size: 0.9rem;">
+                        <li><i class="fas fa-check"></i> <strong>Guide 1:</strong> "From Hiding to Thriving"</li>
+                        <li><i class="fas fa-check"></i> <strong>Guide 2:</strong> "You're Not Damaged Goods"</li>
+                        <li><i class="fas fa-check"></i> <strong>Guide 3:</strong> "Red Flags for Single Moms"</li>
+                        <li><i class="fas fa-check"></i> <strong>BONUS:</strong> Emergency Response Scripts</li>
+                        <li><i class="fas fa-check"></i> Complete roadmap from shame to confidence</li>
+                        <li><i class="fas fa-check"></i> Everything you need to succeed</li>
+                    </ul>
+                    
+                    <a href="https://nomorehiding.gumroad.com/l/DatingTransformationBundle" class="cta-button" style="margin-top: 25px; font-size: 1rem; padding: 15px 30px; background: linear-gradient(45deg, #fbbf24, #f59e0b); color: #1a202c; border: 2px solid #1a202c;">Get Everything - Save $63</a>
+                </div>
+            </div>
+            
+            <!-- Bundle Details -->
+            <div style="max-width: 800px; margin: 60px auto 0; text-align: left; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2);">
+                <h3 style="color: white; font-family: 'Georgia', serif; font-size: 1.6rem; margin-bottom: 30px; text-align: center;">⚡ ENDING SOON: Complete Bundle for 84% Off</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                    <div style="text-align: center;">
+                        <div style="background: rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 20px; margin-bottom: 15px;">
+                            <i class="fas fa-book-open" style="font-size: 2rem; color: #fbbf24; margin-bottom: 10px;"></i>
+                            <h4 style="color: white; font-size: 1.1rem; margin-bottom: 8px;">Dating Transformation</h4>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Complete story + strategy guide</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="background: rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 20px; margin-bottom: 15px;">
+                            <i class="fas fa-brain" style="font-size: 2rem; color: #fbbf24; margin-bottom: 10px;"></i>
+                            <h4 style="color: white; font-size: 1.1rem; margin-bottom: 8px;">Mindset Mastery</h4>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">From "damaged goods" to "premium package"</p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="background: rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 20px; margin-bottom: 15px;">
+                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: #fbbf24; margin-bottom: 10px;"></i>
+                            <h4 style="color: white; font-size: 1.1rem; margin-bottom: 8px;">Protection Guide</h4>
+                            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Spot red flags before you waste time</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: rgba(251, 191, 36, 0.2); border-radius: 15px; padding: 25px; text-align: center;">
+                    <h4 style="color: white; font-size: 1.2rem; margin-bottom: 15px;"><i class="fas fa-gift" style="margin-right: 10px;"></i>BONUS: Emergency Scripts Cheat Sheet</h4>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1rem; line-height: 1.5;">Printable responses to "I don't date single moms" and other ignorant comments. Never be caught off guard again.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 0.9rem; color: rgba(255,255,255,0.8); font-style: italic; text-align: center;">⚠️ Bundle price increases to $75 in less than 48 hours • Secure payment • Instant access</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Last Chance for Love. Don't wait - your happiness can't wait either. ❤️</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const hours = document.getElementById('hours');
+            const minutes = document.getElementById('minutes');
+            const seconds = document.getElementById('seconds');
+            
+            let h = parseInt(hours.textContent);
+            let m = parseInt(minutes.textContent);
+            let s = parseInt(seconds.textContent);
+            
+            s--;
+            
+            if (s < 0) {
+                s = 59;
+                m--;
+                if (m < 0) {
+                    m = 59;
+                    h--;
+                    if (h < 0) {
+                        h = 47; // Reset to keep the urgency going
+                        m = 59;
+                        s = 59;
+                    }
+                }
+            }
+            
+            hours.textContent = h.toString().padStart(2, '0');
+            minutes.textContent = m.toString().padStart(2, '0');
+            seconds.textContent = s.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // CTA button click tracking
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Redirect to payment processor would happen here!');
+            });
+        });
+    </script>
+</body>
+</html>
