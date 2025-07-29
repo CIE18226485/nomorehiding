@@ -49,8 +49,6 @@
             51%, 100% { opacity: 0.5; }
         }
 
-        /* Header - REMOVED */
-
         /* Hero Section */
         .hero {
             padding: 100px 0 80px;
@@ -287,8 +285,8 @@
         .pricing-card {
             background: linear-gradient(135deg, #fef3c7, #fbbf24);
             color: #1a202c;
-            max-width: 500px;
-            margin: 0 auto;
+            max-width: 450px;
+            margin: 0 auto 30px;
             padding: 50px 40px;
             border-radius: 25px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
@@ -356,6 +354,77 @@
             margin-right: 10px;
         }
 
+        /* Bundle Details */
+        .bundle-details {
+            max-width: 800px;
+            margin: 60px auto 0;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .bundle-details h3 {
+            color: white;
+            font-family: 'Georgia', serif;
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .bundle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .bundle-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .bundle-item i {
+            font-size: 2rem;
+            color: #fbbf24;
+            margin-bottom: 10px;
+        }
+
+        .bundle-item h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .bundle-item p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .bonus-box {
+            background: rgba(251, 191, 36, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .bonus-box h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .bonus-box p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
         /* Footer */
         footer {
             background: #000;
@@ -391,39 +460,15 @@
                 grid-template-columns: 1fr;
             }
             
-            /* Fix pricing section mobile layout */
-            #pricing .container > div:first-of-type {
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
-                max-width: 400px !important;
-                margin: 0 auto !important;
+            .bundle-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
             
-            #pricing .pricing-card {
-                transform: scale(1) !important;
-                max-width: 100% !important;
-            }
-            
-            /* Fix bundle details grid mobile layout */
-            #pricing .container > div:last-of-type div[style*="grid-template-columns: 1fr 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
-            }
-            
-            /* Ensure no horizontal scrolling */
             .container {
                 max-width: 100%;
                 padding: 0 15px;
                 overflow-x: hidden;
-            }
-            
-            /* Fix any grid that might cause horizontal scroll */
-            .content-grid,
-            .target-grid,
-            .contents-grid,
-            .results-grid {
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
             }
         }
     </style>
@@ -454,7 +499,7 @@
                 </div>
             </div>
             
-            <a href="https://nomorehiding.gumroad.com/l/DatingTransformationBundle" class="cta-button">Get 70% Off Now - Only $7</a>
+            <a href="https://nomorehiding.gumroad.com/l/DatingTransformationBundle" class="cta-button">Get It Now - Only $7 (Was $25)</a>
         </div>
     </section>
 
@@ -523,98 +568,75 @@
         </div>
     </section>
 
-    <section id="pricing" class="pricing-section">
+    <section class="pricing-section">
         <div class="container">
-            <h2 style="margin-bottom: 40px;">Last Chance - 70% Off</h2>
+            <h2 style="margin-bottom: 40px;">I Almost Didn't Share This</h2>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
-                
-                <!-- Single Guide -->
-                <div class="pricing-card" style="transform: scale(1); max-width: none;">
-                    <div class="limited-badge">⚡ 70% OFF - ENDING SOON</div>
-                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: 'Georgia', serif;">Single Mom Dating Guide</h3>
-                    
-                    <div style="margin: 20px 0;">
-                        <span class="original-price" style="font-size: 1.5rem;">$25</span>
-                        <div class="sale-price" style="font-size: 3rem;">$7</div>
-                        <div class="savings">Save $18 Today!</div>
-                    </div>
-                    
-                    <ul class="pricing-features" style="font-size: 0.9rem;">
-                        <li><i class="fas fa-check"></i> Complete story - from hiding to thriving</li>
-                        <li><i class="fas fa-check"></i> Profile rewrite that got results</li>
-                        <li><i class="fas fa-check"></i> 2-hour dating window strategy</li>
-                        <li><i class="fas fa-check"></i> Scripts for mom-shamers</li>
-                        <li><i class="fas fa-check"></i> Instant download - read tonight</li>
-                    </ul>
-                    
-                    <a href="https://nomorehiding.gumroad.com/l/IUsedtoHideMyKidsonDatingAppsCompleteGuide" class="cta-button" style="margin-top: 25px; font-size: 1rem; padding: 15px 30px; background: linear-gradient(45deg, #dc2626, #ef4444); color: white;">Get 70% Off - $7</a>
-                </div>
+            <!-- Single Guide -->
+            <div class="pricing-card">
+                <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: 'Georgia', serif;">My Story + What I Learned</h3>
+                <div class="sale-price" style="font-size: 3rem;">$7</div>
+                <h4 style="color: #dc2626; margin-bottom: 15px; font-size: 1.1rem;">"I Used to Hide My Kids on Dating Apps"</h4>
+                <ul class="pricing-features" style="font-size: 0.9rem; text-align: left;">
+                    <li><i class="fas fa-heart"></i> My complete dating transformation story</li>
+                    <li><i class="fas fa-heart"></i> Read tonight after the kids are asleep</li>
+                    <li><i class="fas fa-heart"></i> What I actually said when people judged</li>
+                    <li><i class="fas fa-heart"></i> How I found time to date (spoiler: creativity)</li>
+                    <li><i class="fas fa-heart"></i> The profile changes that changed everything</li>
+                </ul>
+                <a href="https://nomorehiding.gumroad.com/l/IUsedtoHideMyKidsonDatingAppsCompleteGuide" class="cta-button" style="margin-top: 25px; font-size: 1rem; padding: 15px 30px; background: linear-gradient(45deg, #dc2626, #ef4444); color: white;">I Want This Story</a>
+            </div>
 
-                <!-- Bundle Option -->
-                <div class="pricing-card" style="transform: scale(1.08); max-width: none; border: 4px solid #fbbf24; position: relative;">
-                    <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: #fbbf24; color: #1a202c; padding: 10px 25px; border-radius: 25px; font-weight: bold; font-size: 1rem; animation: pulse 2s infinite;">🔥 BEST VALUE</div>
-                    
-                    <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: 'Georgia', serif;">Complete Transformation Bundle</h3>
-                    
-                    <div style="margin: 20px 0;">
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-                            <span class="original-price" style="font-size: 1.8rem;">$75</span>
-                            <div class="sale-price" style="font-size: 3rem; margin: 0;">$12</div>
-                        </div>
-                        <div class="savings" style="background: #fbbf24; color: #1a202c;">Save $63 - 84% OFF!</div>
-                    </div>
-                    
-                    <ul class="pricing-features" style="font-size: 0.9rem;">
-                        <li><i class="fas fa-check"></i> <strong>Guide 1:</strong> "From Hiding to Thriving"</li>
-                        <li><i class="fas fa-check"></i> <strong>Guide 2:</strong> "You're Not Damaged Goods"</li>
-                        <li><i class="fas fa-check"></i> <strong>Guide 3:</strong> "Red Flags for Single Moms"</li>
-                        <li><i class="fas fa-check"></i> <strong>BONUS:</strong> Emergency Response Scripts</li>
-                        <li><i class="fas fa-check"></i> Complete roadmap from shame to confidence</li>
-                        <li><i class="fas fa-check"></i> Everything you need to succeed</li>
-                    </ul>
-                    
-                    <a href="https://nomorehiding.gumroad.com/l/DatingTransformationBundle" class="cta-button" style="margin-top: 25px; font-size: 1rem; padding: 15px 30px; background: linear-gradient(45deg, #fbbf24, #f59e0b); color: #1a202c; border: 2px solid #1a202c;">Get Everything - Save $63</a>
+            <!-- Bundle Option -->
+            <div class="pricing-card">
+                <div class="limited-badge">🔥 BEST VALUE</div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-family: 'Georgia', serif;">Everything I Wish I'd Known</h3>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 15px 0;">
+                    <span class="original-price" style="font-size: 1.5rem;">$21</span>
+                    <div class="sale-price" style="font-size: 3rem; margin: 0;">$12</div>
                 </div>
+                <h4 style="color: #dc2626; margin-bottom: 15px; font-size: 1.1rem;">Complete "From Hiding to Thriving" Collection</h4>
+                <ul class="pricing-features" style="font-size: 0.9rem; text-align: left;">
+                    <li><i class="fas fa-heart"></i> <strong>My Story:</strong> "I Used to Hide My Kids"</li>
+                    <li><i class="fas fa-heart"></i> <strong>Mindset Guide:</strong> "You're Not Damaged Goods"</li>
+                    <li><i class="fas fa-heart"></i> <strong>Safety Guide:</strong> "Red Flags for Single Moms"</li>
+                    <li><i class="fas fa-heart"></i> <strong>Quick Reference:</strong> Emergency Response Scripts</li>
+                    <li><i class="fas fa-heart"></i> Complete roadmap from shame to confidence</li>
+                </ul>
+                <a href="https://nomorehiding.gumroad.com/l/DatingTransformationBundle" class="cta-button" style="margin-top: 25px; font-size: 1rem; padding: 15px 30px; background: linear-gradient(45deg, #fbbf24, #f59e0b); color: #1a202c; border: 2px solid #1a202c;">Give Me Everything</a>
             </div>
             
             <!-- Bundle Details -->
-            <div style="max-width: 800px; margin: 60px auto 0; text-align: left; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2);">
-                <h3 style="color: white; font-family: 'Georgia', serif; font-size: 1.6rem; margin-bottom: 30px; text-align: center;">⚡ ENDING SOON: Complete Bundle for 84% Off</h3>
+            <div class="bundle-details">
+                <h3>Why I'm Sharing Everything for $12:</h3>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-bottom: 30px;">
-                    <div style="text-align: center;">
-                        <div style="background: rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 20px; margin-bottom: 15px;">
-                            <i class="fas fa-book-open" style="font-size: 2rem; color: #fbbf24; margin-bottom: 10px;"></i>
-                            <h4 style="color: white; font-size: 1.1rem; margin-bottom: 8px;">Dating Transformation</h4>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Complete story + strategy guide</p>
-                        </div>
+                <div class="bundle-grid">
+                    <div class="bundle-item">
+                        <i class="fas fa-book-open"></i>
+                        <h4>My Complete Story</h4>
+                        <p>How I went from hiding my daughter to proudly introducing her to my now-partner</p>
                     </div>
                     
-                    <div style="text-align: center;">
-                        <div style="background: rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 20px; margin-bottom: 15px;">
-                            <i class="fas fa-brain" style="font-size: 2rem; color: #fbbf24; margin-bottom: 10px;"></i>
-                            <h4 style="color: white; font-size: 1.1rem; margin-bottom: 8px;">Mindset Mastery</h4>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">From "damaged goods" to "premium package"</p>
-                        </div>
+                    <div class="bundle-item">
+                        <i class="fas fa-brain"></i>
+                        <h4>The Inner Work</h4>
+                        <p>How to stop seeing yourself as "damaged goods" and start seeing your worth</p>
                     </div>
                     
-                    <div style="text-align: center;">
-                        <div style="background: rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 20px; margin-bottom: 15px;">
-                            <i class="fas fa-shield-alt" style="font-size: 2rem; color: #fbbf24; margin-bottom: 10px;"></i>
-                            <h4 style="color: white; font-size: 1.1rem; margin-bottom: 8px;">Protection Guide</h4>
-                            <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;">Spot red flags before you waste time</p>
-                        </div>
+                    <div class="bundle-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Protecting Your Heart</h4>
+                        <p>Red flags I learned to spot (some the hard way) so you don't waste time on the wrong guys</p>
                     </div>
                 </div>
                 
-                <div style="background: rgba(251, 191, 36, 0.2); border-radius: 15px; padding: 25px; text-align: center;">
-                    <h4 style="color: white; font-size: 1.2rem; margin-bottom: 15px;"><i class="fas fa-gift" style="margin-right: 10px;"></i>BONUS: Emergency Scripts Cheat Sheet</h4>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 1rem; line-height: 1.5;">Printable responses to "I don't date single moms" and other ignorant comments. Never be caught off guard again.</p>
+                <div class="bonus-box">
+                    <h4><i class="fas fa-gift" style="margin-right: 10px;"></i>Plus: What to Say When They Say Stupid Things</h4>
+                    <p>A printable card with my actual responses to "I don't date single moms," "Your kids must be exhausting," and other garbage humans say. Keep it handy for confidence on demand.</p>
                 </div>
             </div>
             
-            <p style="margin-top: 30px; font-size: 0.9rem; color: rgba(255,255,255,0.8); font-style: italic; text-align: center;">⚠️ Bundle price increases to $75 in less than 48 hours • Secure payment • Instant access</p>
+            <p style="margin-top: 30px; font-size: 0.9rem; color: rgba(255,255,255,0.8); font-style: italic; text-align: center;">I know $12 is probably what you spend on coffee you don't finish because someone called at pickup time. But this might change how you see yourself forever.</p>
         </div>
     </section>
 
@@ -644,7 +666,7 @@
                     m = 59;
                     h--;
                     if (h < 0) {
-                        h = 47; // Reset to keep the urgency going
+                        h = 47;
                         m = 59;
                         s = 59;
                     }
@@ -657,28 +679,6 @@
         }
         
         setInterval(updateCountdown, 1000);
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // CTA button click tracking
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('Redirect to payment processor would happen here!');
-            });
-        });
     </script>
 </body>
 </html>
