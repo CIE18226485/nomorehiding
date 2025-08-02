@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Hiding Your Kids on Dating Apps - The Single Mom's Guide to Authentic Dating</title>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR-PIXEL-ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR-PIXEL-ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    
     <style>
         * {
             margin: 0;
@@ -206,33 +225,6 @@
             color: #2d3436;
         }
         
-        /* Guarantee Section */
-        .guarantee-section {
-            padding: 60px 0;
-            background: white;
-            text-align: center;
-        }
-        
-        .guarantee-box {
-            background: #f0f3ff;
-            padding: 40px;
-            border-radius: 10px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .guarantee-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #2d3436;
-        }
-        
-        .guarantee-box p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 30px;
-        }
-        
         /* Final CTA */
         .final-cta {
             padding: 80px 0;
@@ -274,13 +266,11 @@
             .pain-section h2,
             .content-section h2,
             .story-box h3,
-            .guarantee-box h3,
             .final-cta h2 {
                 font-size: 1.6rem;
             }
             
-            .story-box,
-            .guarantee-box {
+            .story-box {
                 padding: 25px;
             }
         }
@@ -293,7 +283,8 @@
             <h1>I Used to Hide My Kids on Dating Apps...</h1>
             <p class="subheadline">Until I Discovered How to Date Authentically as a Single Mom (And Met Someone Who Loves Us All)</p>
             <div class="price-tag">Just $7 - Instant Download</div><br>
-            <a href="https://nomorehiding.gumroad.com/l/IUsedtoHideMyKidsonDatingAppsCompleteGuide" class="cta-button">Get Your Guide Now →</a>
+            <!-- Live Stripe Payment Link -->
+            <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Get Your Guide Now →</a>
         </div>
     </section>
 
@@ -393,17 +384,29 @@
         </div>
     </section>
 
-
-
     <!-- Final CTA -->
-    <section class="final-cta" id="purchase">
+    <section class="final-cta">
         <div class="container">
             <h2>Stop Hiding. Start Dating. Find Love.</h2>
             <p>You deserve someone who loves you AND your kids. This guide shows you exactly how to find them.</p>
             <div class="urgency">⏰ Special Launch Price: Just $7 (Regular Price $19)</div><br>
-            <a href="https://nomorehiding.gumroad.com/l/IUsedtoHideMyKidsonDatingAppsCompleteGuide" class="cta-button">Download Your Guide Now →</a>
+            <!-- Live Stripe Payment Link -->
+            <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Download Your Guide Now →</a>
             <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">Instant download • Secure checkout</p>
         </div>
     </section>
+
+    <script>
+        // Track scroll depth
+        let scrollTracked = false;
+        window.addEventListener('scroll', function() {
+            if (!scrollTracked && window.scrollY > window.innerHeight * 0.5) {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ViewContent');
+                }
+                scrollTracked = true;
+            }
+        });
+    </script>
 </body>
 </html>
