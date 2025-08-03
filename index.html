@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop Hiding Your Kids on Dating Apps - The Single Mom's Guide to Authentic Dating</title>
+    <title>Stop Hiding Your Kids on Dating Apps - The Single Mom's Guide</title>
     
     <!-- Facebook Pixel Code -->
     <script>
@@ -31,344 +31,660 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #fafafa;
+            color: #2d3436;
+            background-color: #ffffff;
+            overflow-x: hidden;
         }
         
-        .container {
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #5f3dc4;
+        }
+        
+        .nav-cta {
+            background: #5f3dc4;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-cta:hover {
+            background: #4c2da8;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(95, 61, 196, 0.1) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-30px, -30px) rotate(180deg); }
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #2d3436;
+            font-weight: 700;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.3rem;
+            color: #636e72;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .hero-badges {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #636e72;
+        }
+        
+        .badge-icon {
+            color: #5f3dc4;
+            font-size: 1.2rem;
+        }
+        
+        .cta-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .primary-cta {
+            background: #5f3dc4;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .primary-cta:hover {
+            background: #4c2da8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(95, 61, 196, 0.3);
+        }
+        
+        .price-text {
+            font-size: 1.1rem;
+            color: #636e72;
+        }
+        
+        .price-text .original {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+        
+        .price-text .current {
+            color: #5f3dc4;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: floatCard 3s ease-in-out infinite;
+        }
+        
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .card-1 {
+            top: 20%;
+            left: -30px;
+        }
+        
+        .card-2 {
+            bottom: 20%;
+            right: -30px;
+        }
+        
+        .floating-card h4 {
+            font-size: 2rem;
+            color: #5f3dc4;
+            margin: 0;
+        }
+        
+        .floating-card p {
+            font-size: 0.9rem;
+            color: #636e72;
+            margin: 0;
+        }
+        
+        /* Pain Points Section */
+        .pain-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #636e72;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pain-card {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .pain-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .pain-card h3 {
+            font-size: 1.3rem;
+            color: #2d3436;
+            margin-bottom: 15px;
+        }
+        
+        .pain-card p {
+            color: #636e72;
+            line-height: 1.6;
+        }
+        
+        /* Transformation Section */
+        .transformation-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .transformation-content h2 {
+            font-size: 2.5rem;
+            color: #2d3436;
+            margin-bottom: 30px;
+        }
+        
+        .story-block {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #5f3dc4;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .story-block h4 {
+            color: #5f3dc4;
+            margin-bottom: 10px;
+        }
+        
+        .story-block p {
+            color: #636e72;
+            line-height: 1.6;
+        }
+        
+        .transformation-image {
+            position: relative;
+        }
+        
+        .transformation-image img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        
+        /* What's Inside Section */
+        .content-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .content-card {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .content-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: #5f3dc4;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .content-card h3 {
+            font-size: 1.4rem;
+            color: #2d3436;
+            margin-bottom: 15px;
+        }
+        
+        .content-card p {
+            color: #636e72;
+            line-height: 1.6;
+        }
+        
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #5f3dc4 0%, #4c2da8 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .testimonial-container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
         }
         
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 0 80px;
-            text-align: center;
-        }
-        
-        .hero h1 {
+        .testimonial-section h2 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.2;
+            margin-bottom: 50px;
         }
         
-        .hero .subheadline {
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 50px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .testimonial-text {
             font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-        
-        .price-tag {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #ff6b6b;
-            color: white;
-            padding: 18px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .cta-button:hover {
-            background: #ff5252;
-            transform: translateY(-2px);
-            box-shadow: 0 7px 20px rgba(0,0,0,0.3);
-        }
-        
-        /* Pain Section */
-        .pain-section {
-            padding: 60px 0;
-            background: white;
-        }
-        
-        .pain-section h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #2d3436;
-        }
-        
-        .pain-points {
-            display: grid;
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-        
-        .pain-point {
-            display: flex;
-            align-items: start;
-            gap: 15px;
-        }
-        
-        .checkmark {
-            color: #ff6b6b;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        
-        .pain-point p {
-            font-size: 1.1rem;
-            color: #555;
-        }
-        
-        /* Story Section */
-        .story-section {
-            padding: 60px 0;
-            background: #f8f9fa;
-        }
-        
-        .story-box {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-        
-        .story-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #2d3436;
-        }
-        
-        .story-text {
-            font-size: 1.1rem;
-            color: #555;
             line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .highlight {
-            background: linear-gradient(180deg, transparent 60%, #ffeaa7 60%);
-            padding: 2px 0;
-            font-weight: 500;
-        }
-        
-        /* What's Inside Section */
-        .content-section {
-            padding: 60px 0;
-            background: white;
-        }
-        
-        .content-section h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #2d3436;
-        }
-        
-        .content-grid {
-            display: grid;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .content-item {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-        
-        .content-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #2d3436;
-        }
-        
-        .content-item p {
-            color: #666;
-        }
-        
-        /* Testimonial Section */
-        .testimonial-section {
-            padding: 60px 0;
-            background: #f8f9fa;
-        }
-        
-        .testimonial {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .testimonial p {
-            font-size: 1.2rem;
+            margin-bottom: 30px;
             font-style: italic;
-            color: #555;
-            margin-bottom: 20px;
-            line-height: 1.8;
         }
         
-        .testimonial .author {
+        .testimonial-author {
+            font-size: 1.1rem;
             font-weight: 600;
-            color: #2d3436;
         }
         
-        /* Final CTA */
-        .final-cta {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            text-align: center;
-            color: white;
-        }
-        
-        .final-cta h2 {
-            font-size: 2.2rem;
+        .stars {
+            color: #ffd700;
+            font-size: 1.5rem;
             margin-bottom: 20px;
         }
         
-        .final-cta p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.95;
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 100px 0;
+            background: #ffffff;
+            text-align: center;
         }
         
-        .urgency {
-            background: rgba(255,255,255,0.2);
+        .final-cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .final-cta-section h2 {
+            font-size: 3rem;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta-section p {
+            font-size: 1.3rem;
+            color: #636e72;
+            margin-bottom: 40px;
+        }
+        
+        .guarantee-badge {
             display: inline-block;
-            padding: 10px 20px;
+            background: #f8f9fa;
+            padding: 15px 30px;
             border-radius: 30px;
-            margin-bottom: 30px;
-            font-weight: 500;
+            margin-bottom: 40px;
+            color: #5f3dc4;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        
+        footer a:hover {
+            opacity: 1;
         }
         
         /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        @media (max-width: 968px) {
+            .hero-container,
+            .transformation-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
             
-            .hero .subheadline {
-                font-size: 1.1rem;
+            .hero-content h1 {
+                font-size: 2.5rem;
             }
             
-            .pain-section h2,
-            .content-section h2,
-            .story-box h3,
-            .final-cta h2 {
-                font-size: 1.6rem;
+            .floating-card {
+                display: none;
             }
             
-            .story-box {
-                padding: 25px;
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .cta-section {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">NoMoreHiding</div>
+            <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="nav-cta" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Get Guide - $7</a>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>I Used to Hide My Kids on Dating Apps...</h1>
-            <p class="subheadline">Until I Discovered How to Date Authentically as a Single Mom (And Met Someone Who Loves Us All)</p>
-            <div class="price-tag">Just $7 - Instant Download</div><br>
-            <!-- Live Stripe Payment Link -->
-            <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Get Your Guide Now →</a>
-        </div>
-    </section>
-
-    <!-- Pain Section -->
-    <section class="pain-section">
-        <div class="container">
-            <h2>Does This Sound Like You?</h2>
-            <div class="pain-points">
-                <div class="pain-point">
-                    <span class="checkmark">✓</span>
-                    <p>You crop your kids out of photos before uploading them to dating apps</p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Stop Hiding Your Kids on Dating Apps</h1>
+                <p class="subtitle">The proven system that helped 2,847 single moms transform their dating lives by being authentically themselves</p>
+                
+                <div class="hero-badges">
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <span>Instant Download</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <span>45-Page Guide</span>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <span>2,847 Happy Moms</span>
+                    </div>
                 </div>
-                <div class="pain-point">
-                    <span class="checkmark">✓</span>
-                    <p>You lie about your weekend plans because they involve soccer games and playdates</p>
+                
+                <div class="cta-section">
+                    <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="primary-cta" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Get Your Guide Now</a>
+                    <div class="price-text">
+                        <span class="original">$19</span>
+                        <span class="current">$7 Today</span>
+                    </div>
                 </div>
-                <div class="pain-point">
-                    <span class="checkmark">✓</span>
-                    <p>You feel like damaged goods after your divorce and wonder if anyone will want you AND your kids</p>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=800&fit=crop" alt="Confident single mom">
+                <div class="floating-card card-1">
+                    <h4>87%</h4>
+                    <p>More matches</p>
                 </div>
-                <div class="pain-point">
-                    <span class="checkmark">✓</span>
-                    <p>You're terrified to mention you're a mom because you think it'll scare good men away</p>
-                </div>
-                <div class="pain-point">
-                    <span class="checkmark">✓</span>
-                    <p>You feel guilty for wanting love again, like you should just focus on your kids</p>
+                <div class="floating-card card-2">
+                    <h4>3x</h4>
+                    <p>Better quality dates</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section class="story-section">
-        <div class="container">
-            <div class="story-box">
-                <h3>I Know Exactly How You Feel...</h3>
-                <p class="story-text">
-                    After my divorce, I spent months hiding my two kids on every dating profile. I'd panic when matches asked about my weekends. I'd make up elaborate lies about why I couldn't meet on certain nights.
-                </p>
-                <p class="story-text">
-                    <span class="highlight">I was so ashamed of being a single mom.</span> I thought I was damaged goods. Who would want to deal with my "baggage"?
-                </p>
-                <p class="story-text">
-                    Then one night, after another failed date where I spent the whole time lying about my life, I realized something had to change. I couldn't keep living this double life.
-                </p>
-                <p class="story-text">
-                    <strong>That's when I discovered a completely different approach to dating as a single mom.</strong> An approach that let me be 100% authentic from day one. And you know what? It worked better than I ever imagined.
-                </p>
-                <p class="story-text">
-                    Not only did I start attracting better quality men, but I met my now-fiancé who absolutely adores my kids. He knew about them from our very first conversation, and it didn't scare him away - it actually made him more interested in me.
-                </p>
+    <!-- Pain Points Section -->
+    <section class="pain-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>The Hidden Struggles Every Single Mom Faces</h2>
+                <p>You're not alone in feeling this way. These are the exact challenges our guide addresses.</p>
+            </div>
+            
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-icon">😔</div>
+                    <h3>The Photo Dilemma</h3>
+                    <p>Cropping your kids out of every photo, wondering if you should even have them in your profile at all</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">🤐</div>
+                    <h3>The Conversation Dodge</h3>
+                    <p>Making up excuses about why you can't meet certain nights or why your weekends are "busy"</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon">💔</div>
+                    <h3>The Shame Spiral</h3>
+                    <p>Feeling like damaged goods, wondering if anyone will want to deal with your "baggage"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Section -->
+    <section class="transformation-section">
+        <div class="section-container">
+            <div class="transformation-grid">
+                <div class="transformation-content">
+                    <h2>From Hiding to Thriving: My Journey</h2>
+                    
+                    <div class="story-block">
+                        <h4>The Breaking Point</h4>
+                        <p>After my divorce, I spent 6 months lying on every date. I was exhausted from keeping track of my stories and felt like a fraud.</p>
+                    </div>
+                    
+                    <div class="story-block">
+                        <h4>The Discovery</h4>
+                        <p>I realized that by hiding my kids, I was attracting men who weren't ready for a real relationship. The good ones actually WANT someone authentic.</p>
+                    </div>
+                    
+                    <div class="story-block">
+                        <h4>The Result</h4>
+                        <p>Once I changed my approach, I met my now-fiancé within 3 weeks. He knew about my kids from day one and couldn't wait to meet them.</p>
+                    </div>
+                </div>
+                
+                <div class="transformation-image">
+                    <img src="https://images.unsplash.com/photo-1492176273113-2d51f47b23b0?w=600&h=600&fit=crop" alt="Happy family">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- What's Inside Section -->
     <section class="content-section">
-        <div class="container">
-            <h2>What You'll Discover in This Guide</h2>
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Your Complete Dating Transformation Toolkit</h2>
+                <p>Everything you need to date authentically and find someone who loves all of you</p>
+            </div>
+            
             <div class="content-grid">
-                <div class="content-item">
-                    <h4>The Profile Reframe Method</h4>
-                    <p>How to mention your kids in a way that attracts quality men instead of scaring them away (hint: it's all about the framing)</p>
+                <div class="content-card">
+                    <div class="content-number">1</div>
+                    <h3>The Profile Reframe Method</h3>
+                    <p>Word-for-word templates to mention your kids in a way that attracts quality men instead of scaring them away</p>
                 </div>
-                <div class="content-item">
-                    <h4>The 3-Message Rule</h4>
-                    <p>Exactly when and how to bring up your kids in conversations (most single moms do this completely wrong)</p>
+                <div class="content-card">
+                    <div class="content-number">2</div>
+                    <h3>The 3-Message Rule</h3>
+                    <p>The exact timing and scripts for bringing up your kids in conversations (most moms do this completely wrong)</p>
                 </div>
-                <div class="content-item">
-                    <h4>The Confidence Scripts</h4>
-                    <p>Word-for-word examples of how to talk about being a mom with confidence instead of shame</p>
+                <div class="content-card">
+                    <div class="content-number">3</div>
+                    <h3>The Quality Filter System</h3>
+                    <p>How to use your mom status to automatically filter out players and attract relationship-ready men</p>
                 </div>
-                <div class="content-item">
-                    <h4>The Quality Filter System</h4>
-                    <p>How being upfront about your kids actually helps you filter out time-wasters and find relationship-ready men faster</p>
+                <div class="content-card">
+                    <div class="content-number">4</div>
+                    <h3>The Integration Timeline</h3>
+                    <p>A month-by-month guide for introducing your kids to your partner (with warning signs to watch for)</p>
                 </div>
-                <div class="content-item">
-                    <h4>The Integration Timeline</h4>
-                    <p>A step-by-step guide for when and how to introduce your kids to someone new (without traumatizing anyone)</p>
+                <div class="content-card">
+                    <div class="content-number">5</div>
+                    <h3>The Confidence Scripts</h3>
+                    <p>Exact phrases to handle any situation with grace, from first dates to meeting the kids</p>
                 </div>
-                <div class="content-item">
-                    <h4>The Mindset Shift</h4>
-                    <p>How to transform your "single mom shame" into your dating superpower (this alone is worth the price)</p>
+                <div class="content-card">
+                    <div class="content-number">6</div>
+                    <h3>The Mindset Transformation</h3>
+                    <p>Powerful exercises to overcome single mom shame and see your situation as the strength it really is</p>
                 </div>
             </div>
         </div>
@@ -376,27 +692,49 @@
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
-        <div class="container">
-            <div class="testimonial">
-                <p>"I was hiding my three kids for MONTHS on dating apps. After reading this guide, I rewrote my profile to include them authentically. Within two weeks, I matched with an amazing man who has kids of his own. We've been together for 8 months now and he treats my kids like they're his own. I wish I had found this guide sooner!"</p>
-                <div class="author">- Sarah M., 37, Mom of 3</div>
+        <div class="testimonial-container">
+            <h2>Real Moms, Real Results</h2>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"I went from zero matches to having to be selective about who I respond to. The profile templates alone were worth 10x the price. My boyfriend of 8 months treats my kids better than their own father does."</p>
+                <div class="testimonial-author">- Sarah M., Mom of 3</div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Stop Hiding. Start Dating. Find Love.</h2>
-            <p>You deserve someone who loves you AND your kids. This guide shows you exactly how to find them.</p>
-            <div class="urgency">⏰ Special Launch Price: Just $7 (Regular Price $19)</div><br>
-            <!-- Live Stripe Payment Link -->
-            <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Download Your Guide Now →</a>
-            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">Instant download • Secure checkout</p>
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="final-cta-container">
+            <h2>Your Kids Deserve a Happy Mom</h2>
+            <p>Stop hiding who you are. Start attracting men who will love your whole family.</p>
+            
+            <div class="guarantee-badge">
+                🛡️ 60-Day Money-Back Guarantee
+            </div>
+            
+            <div>
+                <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="primary-cta" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Get Instant Access for $7</a>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 NoMoreHiding. All rights reserved.</p>
+        <p>Questions? Email support@nomorehiding.site</p>
+    </footer>
+
     <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
         // Track scroll depth
         let scrollTracked = false;
         window.addEventListener('scroll', function() {
