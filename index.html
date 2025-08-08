@@ -3,26 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Single Mom Dating Method - Find Love Without Hiding</title>
-    
-    <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR-PIXEL-ID');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=YOUR-PIXEL-ID&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-    
+    <title>The Single Mom's Guide to Real Love - Get Yours Today</title>
     <style>
         * {
             margin: 0;
@@ -33,700 +14,802 @@
         body {
             font-family: 'Georgia', serif;
             line-height: 1.7;
-            color: #4a4a4a;
-            background-color: #fef9f5;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, #2c1810 0%, #8b4513 50%, #d2691e 100%);
+            min-height: 100vh;
+            overflow: hidden;
         }
         
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+        body.quiz-complete {
+            overflow: auto;
         }
         
-        /* Header */
-        header {
-            background: #fff;
-            padding: 30px 0;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #d4a574;
-            font-style: italic;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 60px 0 80px;
-            text-align: center;
-            background: linear-gradient(180deg, #fff 0%, #fef9f5 100%);
-        }
-        
-        .hero-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 30px;
-            object-fit: cover;
-            border: 5px solid #f4e4d4;
-        }
-        
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            color: #3a3a3a;
-        }
-        
-        .hero h1 span {
-            color: #e8a87c;
-            font-style: italic;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: #6b6b6b;
-            margin-bottom: 40px;
-            font-weight: 300;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #e8a87c;
-            color: white;
-            padding: 18px 35px;
-            font-size: 1.1rem;
-            font-weight: 400;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(232, 168, 124, 0.3);
-            margin-bottom: 20px;
-        }
-        
-        .cta-button:hover {
-            background: #d4966a;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(232, 168, 124, 0.4);
-        }
-        
-        .price-guarantee {
-            font-size: 0.95rem;
-            color: #888;
-            font-style: italic;
-        }
-        
-        /* Trust Badges */
-        .trust-section {
-            padding: 50px 0;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-        }
-        
-        .trust-badges {
+        /* Quiz Modal Overlay */
+        .quiz-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 24, 16, 0.95);
+            z-index: 9999;
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-        
-        .trust-badge {
-            text-align: center;
-        }
-        
-        .trust-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .trust-number {
-            font-size: 1.8rem;
-            font-weight: 400;
-            color: #e8a87c;
-            display: block;
-        }
-        
-        .trust-label {
-            font-size: 0.9rem;
-            color: #888;
-            font-style: italic;
-        }
-        
-        /* Problem Section */
-        .problem-section {
-            padding: 80px 0;
-            background: #fef9f5;
-        }
-        
-        .section-title {
-            font-size: 2.3rem;
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #3a3a3a;
-            font-style: italic;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: #888;
-            margin-bottom: 50px;
-            font-size: 1.1rem;
-        }
-        
-        .problem-grid {
-            display: grid;
-            gap: 40px;
-        }
-        
-        .problem-item {
-            background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        
-        .problem-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            object-fit: cover;
-            opacity: 0.8;
-        }
-        
-        .problem-content h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #3a3a3a;
-            font-weight: 400;
-        }
-        
-        .problem-content p {
-            color: #666;
-            line-height: 1.8;
-        }
-        
-        /* Method Section */
-        .method-section {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .method-intro {
-            text-align: center;
-            max-width: 650px;
-            margin: 0 auto 60px;
-        }
-        
-        .method-intro p {
-            font-size: 1.15rem;
-            color: #666;
-            line-height: 1.9;
-            font-style: italic;
-        }
-        
-        .method-steps {
-            display: grid;
-            gap: 50px;
-        }
-        
-        .method-step {
-            display: grid;
-            grid-template-columns: 150px 1fr;
-            gap: 30px;
-            align-items: start;
-        }
-        
-        .method-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 15px;
-            object-fit: cover;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .method-content {
-            padding-top: 10px;
-        }
-        
-        .step-label {
-            display: inline-block;
-            background: #f4e4d4;
-            color: #d4a574;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        
-        .method-content h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            color: #3a3a3a;
-            font-weight: 400;
-        }
-        
-        .method-content p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .method-example {
-            background: #fef9f5;
+            justify-content: center;
             padding: 20px;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .quiz-overlay.hidden {
+            display: none;
+        }
+        
+        .quiz-modal {
+            background: #fff8f0;
             border-radius: 10px;
-            border-left: 3px solid #e8a87c;
-            font-style: italic;
-            color: #555;
-        }
-        
-        /* Results Section */
-        .results-section {
-            padding: 80px 0;
-            background: #fef9f5;
-        }
-        
-        .result-story {
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            text-align: center;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-        
-        .result-image {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            object-fit: cover;
-            border: 4px solid #f4e4d4;
-        }
-        
-        .result-story h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #3a3a3a;
-            font-weight: 400;
-            font-style: italic;
-        }
-        
-        .result-story p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-        
-        .result-stat {
-            text-align: center;
-            background: white;
-            padding: 30px 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .result-stat h4 {
-            font-size: 2.2rem;
-            font-weight: 400;
-            color: #e8a87c;
-            margin-bottom: 10px;
-        }
-        
-        .result-stat p {
-            color: #888;
-            font-style: italic;
-        }
-        
-        /* Testimonial */
-        .testimonial {
-            background: linear-gradient(135deg, #f4e4d4 0%, #fef9f5 100%);
             padding: 40px;
-            border-radius: 15px;
-            position: relative;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            animation: slideUp 0.6s ease-out;
         }
         
-        .quote-mark {
-            font-size: 3rem;
-            color: #e8a87c;
-            opacity: 0.3;
-            position: absolute;
-            top: 20px;
-            left: 30px;
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         
-        .testimonial-text {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: #555;
-            margin-bottom: 20px;
-            font-style: italic;
-            position: relative;
-            z-index: 1;
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 30px;
         }
         
-        .testimonial-author {
-            font-weight: 400;
-            color: #3a3a3a;
-            text-align: right;
+        .quiz-header h2 {
+            font-size: 2em;
+            color: #2c1810;
+            margin-bottom: 15px;
+            font-weight: normal;
         }
         
-        /* FAQ Section */
-        .faq-section {
-            padding: 80px 0;
+        .quiz-header p {
+            color: #8b4513;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .quiz-progress {
+            background: #e0e0e0;
+            height: 6px;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .quiz-progress-bar {
+            background: #d2691e;
+            height: 100%;
+            width: 20%;
+            transition: width 0.5s ease;
+        }
+        
+        .quiz-question {
+            display: none;
+        }
+        
+        .quiz-question.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        .quiz-question p {
+            font-size: 1.2em;
+            color: #2c1810;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+        
+        .quiz-option {
+            display: block;
+            margin-bottom: 15px;
+            cursor: pointer;
+            padding: 18px;
             background: white;
+            border: 2px solid #d4a574;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .quiz-option:hover {
+            background: #fff;
+            border-color: #d2691e;
+            transform: translateX(5px);
+        }
+        
+        .quiz-option input {
+            margin-right: 12px;
+        }
+        
+        .quiz-option.selected {
+            background: #d2691e;
+            color: white;
+            border-color: #d2691e;
+        }
+        
+        .quiz-btn {
+            background: #8b4513;
+            color: #fff8f0;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            margin-top: 20px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .quiz-btn:hover {
+            background: #6b3410;
+            transform: translateY(-2px);
+        }
+        
+        .quiz-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        #quiz-result {
+            text-align: center;
+            display: none;
+        }
+        
+        #quiz-result h3 {
+            color: #d2691e;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        #result-text {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #4a3426;
+            margin-bottom: 25px;
+        }
+        
+        .result-cta {
+            background: #2c1810;
+            color: #fff8f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .result-cta p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        /* Main Content (Initially Blurred) */
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            filter: blur(5px);
+            transition: filter 0.5s ease;
+        }
+        
+        .container.visible {
+            filter: blur(0);
+        }
+        
+        .card {
+            background: #fff8f0;
+            border-radius: 8px;
+            padding: 50px 40px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .price-badge {
+            display: inline-block;
+            background: #d2691e;
+            color: #fff8f0;
+            padding: 12px 28px;
+            border-radius: 3px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            animation: subtle-pulse 3s infinite;
+        }
+        
+        @keyframes subtle-pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            line-height: 1.15;
+            margin-bottom: 30px;
+            color: #2c1810;
+            font-weight: normal;
+        }
+        
+        .real-talk {
+            font-size: 1.2em;
+            color: #4a3426;
+            margin-bottom: 35px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #d4a574;
+            line-height: 1.8;
+        }
+        
+        .real-talk strong {
+            color: #8b4513;
+            font-weight: bold;
+        }
+        
+        .money-truth {
+            background: #2c1810;
+            color: #fff8f0;
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 35px;
+            text-align: center;
+            font-size: 1.15em;
+            line-height: 1.7;
+        }
+        
+        .money-truth strong {
+            color: #d2691e;
+            font-size: 1.1em;
+        }
+        
+        .for-your-babies {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 35px;
+            border: 2px solid #d4a574;
+        }
+        
+        .for-your-babies h2 {
+            font-size: 1.6em;
+            margin-bottom: 25px;
+            font-weight: normal;
+            color: #2c1810;
+        }
+        
+        .for-your-babies ul {
+            list-style: none;
+        }
+        
+        .for-your-babies li {
+            margin-bottom: 22px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05em;
+            line-height: 1.6;
+            color: #4a3426;
+        }
+        
+        .for-your-babies li:before {
+            content: "♥";
+            position: absolute;
+            left: 0;
+            color: #d2691e;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .for-your-babies li strong {
+            color: #8b4513;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .testimony {
+            background: #fff;
+            padding: 25px;
+            border-radius: 5px;
+            margin: 35px 0;
+            border-left: 4px solid #d2691e;
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #4a3426;
+        }
+        
+        .testimony-author {
+            text-align: right;
+            margin-top: 15px;
+            color: #8b4513;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        
+        .pricing-section {
+            background: #fff;
+            padding: 40px;
+            border-radius: 5px;
+            margin-top: 40px;
+            border: 3px solid #d2691e;
+            text-align: center;
+        }
+        
+        .pricing-header h3 {
+            font-size: 2em;
+            color: #2c1810;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+        
+        .price-display {
+            font-size: 3.5em;
+            color: #d2691e;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .price-context {
+            color: #4a3426;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .btn-buy {
+            display: inline-block;
+            padding: 20px 50px;
+            background: #8b4513;
+            color: #fff8f0;
+            border: none;
+            border-radius: 3px;
+            font-size: 1.3em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: 'Georgia', serif;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-buy:hover {
+            background: #6b3410;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.3);
+        }
+        
+        .guarantee {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #d4a574;
+            color: #6b3410;
+            font-size: 0.95em;
+        }
+        
+        .guarantee strong {
+            color: #8b4513;
+        }
+        
+        .closing-truth {
+            margin-top: 40px;
+            padding: 30px;
+            background: #2c1810;
+            color: #fff8f0;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.15em;
+            line-height: 1.7;
+        }
+        
+        .closing-truth strong {
+            color: #d2691e;
+        }
+        
+        .faq {
+            margin-top: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .faq h3 {
+            font-size: 1.5em;
+            color: #2c1810;
+            margin-bottom: 25px;
+            font-weight: normal;
         }
         
         .faq-item {
-            background: #fef9f5;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            border: 1px solid #f4e4d4;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f0f0f0;
         }
         
-        .faq-question {
-            font-size: 1.2rem;
-            font-weight: 400;
-            margin-bottom: 15px;
-            color: #3a3a3a;
-            font-style: italic;
+        .faq-item:last-child {
+            border-bottom: none;
         }
         
-        .faq-answer {
-            color: #666;
-            line-height: 1.8;
+        .faq-q {
+            font-weight: bold;
+            color: #8b4513;
+            margin-bottom: 10px;
+            font-size: 1.05em;
         }
         
-        /* Final CTA */
-        .final-cta {
-            padding: 80px 0;
-            text-align: center;
-            background: linear-gradient(135deg, #e8a87c 0%, #d4966a 100%);
-            color: white;
+        .faq-a {
+            color: #4a3426;
+            line-height: 1.6;
         }
         
-        .final-cta-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 0 auto 30px;
-            object-fit: cover;
-            border: 5px solid rgba(255,255,255,0.3);
-        }
-        
-        .final-cta h2 {
-            font-size: 2.5rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        
-        .final-cta p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .final-cta .cta-button {
-            background: white;
-            color: #d4966a;
-        }
-        
-        .final-cta .cta-button:hover {
-            background: #fef9f5;
-        }
-        
-        /* Footer */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            background: #3a3a3a;
-            color: #ccc;
-        }
-        
-        footer p {
-            font-size: 0.9rem;
-        }
-        
-        footer a {
-            color: #e8a87c;
-            text-decoration: none;
-        }
-        
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        @media (max-width: 600px) {
+            .quiz-modal {
+                padding: 25px;
             }
             
-            .trust-badges {
-                gap: 25px;
+            h1 {
+                font-size: 2.2em;
             }
             
-            .results-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .card {
+                padding: 30px 20px;
             }
             
-            .method-step {
-                grid-template-columns: 1fr;
-                text-align: center;
+            .pricing-section {
+                padding: 25px 20px;
             }
             
-            .method-image {
-                margin: 0 auto;
+            .price-display {
+                font-size: 3em;
             }
             
-            .section-title {
-                font-size: 1.8rem;
+            .btn-buy {
+                padding: 18px 40px;
+                font-size: 1.2em;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">Love Without Hiding</div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=faces" alt="Confident single mom" class="hero-image">
-            <h1>The <span>Simple Text</span> That Changed My Dating Life as a Single Mom</h1>
-            <p class="hero-subtitle">Join 2,847 mothers who discovered how to date authentically and found partners who adore their children</p>
-            <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Yes, Show Me How → Only $7</a>
-            <p class="price-guarantee">Instant download • Read on any device • 60-day promise</p>
-        </div>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="trust-section">
-        <div class="container">
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <div class="trust-icon">💕</div>
-                    <span class="trust-number">2,847</span>
-                    <span class="trust-label">Happy Moms</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">✨</div>
-                    <span class="trust-number">87%</span>
-                    <span class="trust-label">More Matches</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">⭐</div>
-                    <span class="trust-number">4.9</span>
-                    <span class="trust-label">Mom Reviews</span>
-                </div>
-                <div class="trust-badge">
-                    <div class="trust-icon">📅</div>
-                    <span class="trust-number">30 Days</span>
-                    <span class="trust-label">To First Date</span>
-                </div>
+    <!-- Quiz Modal Overlay -->
+    <div class="quiz-overlay" id="quizOverlay">
+        <div class="quiz-modal">
+            <div class="quiz-header">
+                <h2>Before We Begin...</h2>
+                <p>Let's make sure you get exactly what you need. Answer 5 quick questions to unlock your personalized guide.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <div class="container">
-            <h2 class="section-title">I Know Exactly How You Feel, Mama</h2>
-            <p class="section-subtitle">Because I lived it too...</p>
             
-            <div class="problem-grid">
-                <div class="problem-item">
-                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=150&h=150&fit=crop&crop=faces" alt="Woman looking sad" class="problem-image">
-                    <div class="problem-content">
-                        <h3>The Photo Dilemma</h3>
-                        <p>Every time you upload a photo, you carefully crop out little hands, toy-filled backgrounds, and any evidence of your real life. You feel like you're erasing the most important part of yourself.</p>
-                    </div>
+            <div class="quiz-progress">
+                <div class="quiz-progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div id="quiz-container">
+                <div class="quiz-question active" data-question="1">
+                    <p>When someone asks about your kids on a first date, you:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="a">
+                        Light up and share their ages and what makes them amazing
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="b">
+                        Get defensive and watch for their reaction
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q1" value="c">
+                        Change the subject - it's too soon to talk about them
+                    </label>
                 </div>
                 
-                <div class="problem-item">
-                    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&h=150&fit=crop&crop=faces" alt="Woman on phone" class="problem-image">
-                    <div class="problem-content">
-                        <h3>The Conversation Dance</h3>
-                        <p>"What are you up to this weekend?" sends you into a panic. Another lie about being "busy with friends" when you're really at soccer practice and planning a princess birthday party.</p>
-                    </div>
+                <div class="quiz-question" data-question="2">
+                    <p>Your biggest fear about dating is:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="a">
+                        Someone hurting or disappointing your children
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="b">
+                        Wasting time on another man who isn't serious
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q2" value="c">
+                        Never finding someone who accepts your whole family
+                    </label>
                 </div>
                 
-                <div class="problem-item">
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&h=150&fit=crop&crop=faces" alt="Woman looking thoughtful" class="problem-image">
-                    <div class="problem-content">
-                        <h3>The Shame Spiral</h3>
-                        <p>Late at night, after the kids are asleep, you wonder if you're being selfish for wanting love. Maybe you should just focus on being a mom. Maybe you're too complicated now.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Method Section -->
-    <section class="method-section">
-        <div class="container">
-            <h2 class="section-title">A Different Way to Date as a Mom</h2>
-            
-            <div class="method-intro">
-                <p>After months of hiding and heartbreak, I discovered something beautiful: the right man doesn't see your children as baggage – he sees them as evidence of your capacity to love deeply.</p>
-            </div>
-            
-            <div class="method-steps">
-                <div class="method-step">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=300&h=300&fit=crop" alt="Mom with confidence" class="method-image">
-                    <div class="method-content">
-                        <span class="step-label">Step One</span>
-                        <h3>Reframe Your Story</h3>
-                        <p>Instead of hiding your motherhood, you'll learn to present it as your strength. I'll give you exact profile templates that attract men who value family, commitment, and authentic connection.</p>
-                        <div class="method-example">
-                            "My kids have taught me what unconditional love looks like. Now I'm ready to share that kind of deep connection with a partner who gets it."
-                        </div>
-                    </div>
+                <div class="quiz-question" data-question="3">
+                    <p>How long has it been since your last serious relationship?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="a">
+                        Less than a year - still healing
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="b">
+                        1-2 years - ready but cautious
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q3" value="c">
+                        3+ years - been focused on my babies
+                    </label>
                 </div>
                 
-                <div class="method-step">
-                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=300&h=300&fit=crop" alt="Woman texting" class="method-image">
-                    <div class="method-content">
-                        <span class="step-label">Step Two</span>
-                        <h3>The Magic Message</h3>
-                        <p>There's a perfect moment and way to mention your children that actually draws good men closer. I'll show you my word-for-word scripts that transformed "unmatch" into "when can I meet them?"</p>
-                        <div class="method-example">
-                            "I should mention I'm a mom – it's the most important part of my life. If you're looking for something simple, I understand. But if you're ready for something real..."
-                        </div>
-                    </div>
+                <div class="quiz-question" data-question="4">
+                    <p>When you think about introducing someone to your kids, you:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="a">
+                        Have clear boundaries about timing and circumstances
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="b">
+                        Feel anxious - last time didn't go well
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q4" value="c">
+                        Haven't thought that far ahead yet
+                    </label>
                 </div>
                 
-                <div class="method-step">
-                    <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?w=300&h=300&fit=crop" alt="Happy woman" class="method-image">
-                    <div class="method-content">
-                        <span class="step-label">Step Three</span>
-                        <h3>Date Like You Deserve</h3>
-                        <p>Stop apologizing for being a package deal. I'll teach you how to date with quiet confidence, knowing that the right man will see your family as a beautiful bonus, not a burden.</p>
-                        <div class="method-example">
-                            "He told me that seeing how I am with my kids made him fall for me even harder. He couldn't wait to be part of our little world."
-                        </div>
+                <div class="quiz-question" data-question="5">
+                    <p>What do you need most right now?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="a">
+                        To know how to spot good men from the games
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="b">
+                        Practical strategies for dating with no time or energy
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="q5" value="c">
+                        To believe I deserve love again
+                    </label>
+                </div>
+                
+                <div id="quiz-result">
+                    <h3>Your Personal Results:</h3>
+                    <p id="result-text"></p>
+                    <div class="result-cta">
+                        <p><strong>The guide addresses exactly what you need.</strong></p>
+                        <p>Ready to find the love you and your babies deserve?</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="results-section">
-        <div class="container">
-            <h2 class="section-title">When You Stop Hiding, Magic Happens</h2>
             
-            <div class="result-story">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=faces" alt="Happy mom" class="result-image">
-                <h3>"I went from deleting matches to planning a wedding"</h3>
-                <p>Six months ago, I was cropping my daughter out of every photo. Today, my fiancé is teaching her to ride a bike while I plan our wedding. Being honest about my kids didn't scare him away – it showed him exactly the kind of devoted, loving partner I could be.</p>
+            <button class="quiz-btn" id="nextBtn" onclick="nextQuestion()">Next Question →</button>
+        </div>
+    </div>
+    
+    <!-- Main Content (Initially Blurred) -->
+    <div class="container" id="mainContent">
+        <div class="card">
+            <span class="price-badge">Just $7 • Instant Download</span>
+            
+            <h1>Your Babies Deserve a Father Who Chose Them.<br>You Deserve Love That Includes Them.</h1>
+            
+            <div class="real-talk">
+                <p>Let's be real. They tell you to "put yourself out there" like you don't have homework to check, bedtimes to enforce, and a whole life that doesn't pause for date nights. They swipe right until they hear "I have kids," then ghost like you said something contagious.</p>
+                
+                <p><strong>You're not "too much" or "damaged goods." You're a whole woman who comes with blessings they're not man enough to handle.</strong></p>
+                
+                <p>This guide isn't about hiding your babies until the third date or pretending you're someone you're not. It's about finding the man who sees your children as the bonus they are—the one who'll love them fierce and protect them like his own. Because settling for less isn't just about you anymore.</p>
             </div>
             
-            <div class="results-grid">
-                <div class="result-stat">
-                    <h4>3.2x</h4>
-                    <p>More quality matches</p>
+            <div class="money-truth">
+                <p><strong>Another year of "he's just not ready for kids": Wasted<br>
+                Another man who plays daddy then disappears: Heartbreak<br>
+                Your babies seeing real love modeled right: Everything</strong><br><br>
+                One good man changes your whole family's trajectory.</p>
+            </div>
+            
+            <div class="for-your-babies">
+                <h2>What This Guide Gives You:</h2>
+                <ul>
+                    <li>
+                        <strong>The Real Man Filter System</strong>
+                        Stop wasting time on boys playing games. Know within 3 conversations if he's stepfather material or another waste of your energy. Red flags they show early when you know what to look for.
+                    </li>
+                    <li>
+                        <strong>Dating While Momming Blueprint</strong>
+                        How to date when babysitters cost more than dinner. Where to meet quality men in Detroit, Atlanta, Memphis, and Chicago who respect single mothers. When to introduce him to your babies (and when to run).
+                    </li>
+                    <li>
+                        <strong>The "Protect Your Peace" Playbook</strong>
+                        Scripts for setting boundaries that good men respect. How to spot manipulators who target single moms. Keeping your standards high when the world tells you to settle.
+                    </li>
+                    <li>
+                        <strong>Your Children's Hearts Protected</strong>
+                        How to date without confusing your kids. What to tell them and when. Making sure any man who enters their life adds to it, not disrupts it. Teaching them what healthy love looks like.
+                    </li>
+                    <li>
+                        <strong>Building Your Complete Family</strong>
+                        Blending without losing yourself. Making sure he loves them, not just tolerates them. Creating traditions that make everyone feel chosen. Legal stuff about stepparent rights you need to know.
+                    </li>
+                    <li>
+                        <strong>Healing While Hoping</strong>
+                        Releasing the hurt from their father without bringing baggage. Trusting again when you've been let down. Believing you deserve the love you give. Staying whole while your heart opens.
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="testimony">
+                <p>"I was done. Three years of dating apps, introducing men who disappeared, watching my son ask why they left. This guide changed everything. Met my husband at one of the places it suggested. He coached my son's basketball team before he ever took me on a date. That's a real man."</p>
+                <div class="testimony-author">— Jasmine, Married 2 years, Memphis</div>
+            </div>
+            
+            <div class="testimony">
+                <p>"Every single mom needs this. Not the fairytale BS, but real talk about dating with kids. The boundary scripts saved me from another situationship. Now I'm with someone who asked about my daughter's favorite color before our second date. He knew what he was signing up for."</p>
+                <div class="testimony-author">— Tasha, Dating with intention, Chicago</div>
+            </div>
+            
+            <div class="pricing-section">
+                <div class="pricing-header">
+                    <h3>Get Your Love & Family Guide</h3>
                 </div>
-                <div class="result-stat">
-                    <h4>91%</h4>
-                    <p>Feel confident dating</p>
+                
+                <div class="price-display">$7</div>
+                
+                <div class="price-context">
+                    <p>Less than what you'd spend on coffee for a man who won't text back.<br>
+                    Worth more than years of kissing frogs who can't handle your crown.</p>
                 </div>
-                <div class="result-stat">
-                    <h4>73%</h4>
-                    <p>In relationships within 6 months</p>
+                
+                <a href="#" class="btn-buy" onclick="alert('This would connect to your payment processor'); return false;">Download Your Guide Now</a>
+                
+                <div class="guarantee">
+                    <p><strong>30-Day Money Back Promise</strong><br>
+                    If this guide doesn't shift how you see yourself and what you deserve in love, email us. Full refund. But we know you won't need it.</p>
                 </div>
             </div>
             
-            <div class="testimonial">
-                <span class="quote-mark">"</span>
-                <p class="testimonial-text">I was about to give up completely. My kids are my world, but I felt so alone. This guide didn't just change my dating life – it changed how I see myself. I'm not a single mom trying to date. I'm a whole woman who happens to be blessed with children. My boyfriend of 10 months agrees, and my kids absolutely adore him.</p>
-                <p class="testimonial-author">- Sarah, mama to Lily (7) and James (5)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Questions From Mamas Like You</h2>
-            
-            <div class="faq-item">
-                <h3 class="faq-question">What exactly will I receive?</h3>
-                <p class="faq-answer">You'll get my complete 45-page guide with word-for-word scripts, profile templates, conversation starters, and real examples from moms who've found love. It's like having a best friend who's been there guide you through every step.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3 class="faq-question">How quickly will this work?</h3>
-                <p class="faq-answer">Most moms see more matches within 48 hours of updating their profiles. Real conversations usually start within a week. On average, our moms go on actual dates within 30 days – with men who already know and accept they have children.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3 class="faq-question">Will this work with multiple kids or special situations?</h3>
-                <p class="faq-answer">Absolutely. Whether you have one child or five, whether you're dealing with shared custody, special needs, or complicated ex situations – the principles remain the same. I include specific adaptations for different circumstances.</p>
+            <div class="faq">
+                <h3>Real Questions, Real Answers</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Is this just another "love yourself first" guide?</div>
+                    <div class="faq-a">No. This is practical, actionable advice for dating when you have kids. Where to meet men, what to say, how to protect your time and energy, and how to know if he's real or just running game.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">What if I can't afford $7 right now?</div>
+                    <div class="faq-a">We get it. Email us at support@nomorehiding.com with "Scholarship" in the subject. We set aside copies for mamas who need them most. No explanation needed.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">Will this work in my city?</div>
+                    <div class="faq-a">Yes. We've included specific venues, organizations, and communities in Detroit, Atlanta, Memphis, and Chicago where quality men who respect single mothers actually exist. Plus online strategies that work anywhere.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-q">What if I'm not ready to date yet?</div>
+                    <div class="faq-a">Perfect. Get it now, read the healing section first. You'll know when you're ready, and when you are, you'll have a plan instead of just hoping for the best.</div>
+                </div>
             </div>
             
-            <div class="faq-item">
-                <h3 class="faq-question">What if I'm not ready to trust again?</h3>
-                <p class="faq-answer">I understand, mama. This guide isn't just about dating tactics – it's about healing your heart and remembering you deserve love. Many moms tell me the mindset sections alone were worth it. And with my 60-day guarantee, you can take your time.</p>
+            <div class="closing-truth">
+                <p><strong>Your babies are watching you.</strong><br><br>
+                They're learning what love looks like from what you accept.<br>
+                Show them that real men step up, not step out.<br>
+                Show them that families are built on choice, not just blood.<br><br>
+                <strong>You deserve someone who sees your children as the blessing they are.</strong><br>
+                <strong>They deserve someone who chooses to be their protector.</strong><br><br>
+                Stop settling. Start building the family you all deserve.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=faces" alt="Confident woman" class="final-cta-image">
-            <h2>You Deserve Love, Mama</h2>
-            <p>Your children need to see you happy, loved, and cherished. Let me show you how.</p>
-            <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" class="cta-button" onclick="fbq('track', 'InitiateCheckout', {value: 7.00, currency: 'USD'});">Get Your Guide Now → Just $7</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2025 Love Without Hiding | Questions? Email <a href="mailto:support@nomorehiding.site">support@nomorehiding.site</a></p>
-        </div>
-    </footer>
-
+    </div>
+    
     <script>
-        // Track scroll depth
-        let scrollTracked = false;
-        window.addEventListener('scroll', function() {
-            if (!scrollTracked && window.scrollY > window.innerHeight * 0.5) {
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'ViewContent');
-                }
-                scrollTracked = true;
-            }
+        let currentQuestion = 1;
+        const totalQuestions = 5;
+        
+        // Handle option selection
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove selected class from all options in this question
+                this.parentElement.querySelectorAll('.quiz-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                // Check the radio button
+                this.querySelector('input').checked = true;
+            });
         });
+        
+        function nextQuestion() {
+            const currentQ = document.querySelector(`[data-question="${currentQuestion}"]`);
+            const selected = currentQ.querySelector('input[type="radio"]:checked');
+            
+            if (!selected) {
+                alert('Please select an answer to continue');
+                return;
+            }
+            
+            currentQ.classList.remove('active');
+            
+            if (currentQuestion < totalQuestions) {
+                currentQuestion++;
+                document.querySelector(`[data-question="${currentQuestion}"]`).classList.add('active');
+                
+                // Update progress bar
+                const progress = (currentQuestion / totalQuestions) * 100;
+                document.getElementById('progressBar').style.width = progress + '%';
+                
+                if (currentQuestion === totalQuestions) {
+                    document.getElementById('nextBtn').textContent = 'Get My Results & Access the Guide';
+                }
+            } else {
+                showResults();
+            }
+        }
+        
+        function showResults() {
+            // Hide all questions
+            document.querySelectorAll('.quiz-question').forEach(q => {
+                q.style.display = 'none';
+            });
+            
+            // Calculate personalized result
+            const answers = [];
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) answers.push(selected.value);
+            }
+            
+            let resultText = "";
+            
+            // Personalized results based on answer patterns
+            if (answers.includes('c') && answers[4] === 'c') {
+                resultText = "You've been putting yourself last for so long, you've forgotten you deserve love too. You're ready to remember who you were before the hurt, and build something beautiful for your whole family. This guide will show you exactly how to reclaim your worth and attract the love you deserve.";
+            } else if (answers[1] === 'a') {
+                resultText = "Your mama bear instincts are strong, and that's beautiful. You need strategies to protect your babies' hearts while still opening your own. This guide will teach you how to filter out the games and find someone worthy of your family.";
+            } else if (answers[4] === 'b') {
+                resultText = "You're ready but need practical solutions that fit your real life. Between school runs and bedtime stories, you need dating strategies that actually work for single moms. This guide was written specifically for your situation.";
+            } else {
+                resultText = "You know what you want but need the roadmap to get there. You're done with the games and ready for something real. This guide will show you exactly where to find someone who sees your children as the blessing they are.";
+            }
+            
+            document.getElementById('result-text').textContent = resultText;
+            document.getElementById('quiz-result').style.display = 'block';
+            document.getElementById('nextBtn').textContent = 'Access Your Guide Now →';
+            document.getElementById('nextBtn').onclick = function() {
+                closeQuiz();
+            };
+        }
+        
+        function closeQuiz() {
+            // Fade out quiz overlay
+            document.getElementById('quizOverlay').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('quizOverlay').classList.add('hidden');
+                document.body.classList.add('quiz-complete');
+                document.getElementById('mainContent').classList.add('visible');
+                // Smooth scroll to top of main content
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 500);
+        }
     </script>
 </body>
 </html>
