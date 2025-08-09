@@ -36,8 +36,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 10px;
             animation: fadeIn 0.5s ease-out;
+            overflow-y: auto;
         }
         
         .quiz-overlay.hidden {
@@ -47,13 +48,14 @@
         .quiz-modal {
             background: #fff8f0;
             border-radius: 10px;
-            padding: 40px;
+            padding: 25px 20px;
             max-width: 600px;
             width: 100%;
-            max-height: 90vh;
+            max-height: 95vh;
             overflow-y: auto;
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             animation: slideUp 0.6s ease-out;
+            position: relative;
         }
         
         @keyframes slideUp {
@@ -69,27 +71,27 @@
         
         .quiz-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         
         .quiz-header h2 {
-            font-size: 2em;
+            font-size: 1.5em;
             color: #2c1810;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: normal;
         }
         
         .quiz-header p {
             color: #8b4513;
-            font-size: 1.1em;
-            line-height: 1.6;
+            font-size: 0.95em;
+            line-height: 1.5;
         }
         
         .quiz-progress {
             background: #e0e0e0;
-            height: 6px;
-            border-radius: 3px;
-            margin-bottom: 30px;
+            height: 4px;
+            border-radius: 2px;
+            margin-bottom: 20px;
             overflow: hidden;
         }
         
@@ -110,31 +112,36 @@
         }
         
         .quiz-question p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #2c1810;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             font-weight: bold;
+            line-height: 1.4;
         }
         
         .quiz-option {
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             cursor: pointer;
-            padding: 18px;
+            padding: 12px 14px;
             background: white;
             border: 2px solid #d4a574;
             border-radius: 5px;
             transition: all 0.3s ease;
+            font-size: 0.95em;
+            line-height: 1.4;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .quiz-option:hover {
             background: #fff;
             border-color: #d2691e;
-            transform: translateX(5px);
+            transform: translateX(3px);
         }
         
         .quiz-option input {
-            margin-right: 12px;
+            margin-right: 10px;
+            transform: scale(1.2);
         }
         
         .quiz-option.selected {
@@ -147,19 +154,27 @@
             background: #8b4513;
             color: #fff8f0;
             border: none;
-            padding: 15px 40px;
+            padding: 14px 30px;
             border-radius: 5px;
-            font-size: 1.1em;
+            font-size: 1em;
             cursor: pointer;
             font-family: 'Georgia', serif;
-            margin-top: 20px;
+            margin-top: 15px;
             width: 100%;
             transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+            position: sticky;
+            bottom: 0;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
         }
         
         .quiz-btn:hover {
             background: #6b3410;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
+        }
+        
+        .quiz-btn:active {
+            transform: translateY(0);
         }
         
         .quiz-btn:disabled {
@@ -170,32 +185,126 @@
         #quiz-result {
             text-align: center;
             display: none;
+            padding: 10px 0;
         }
         
         #quiz-result h3 {
             color: #d2691e;
-            font-size: 1.8em;
-            margin-bottom: 20px;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            line-height: 1.3;
         }
         
         #result-text {
-            font-size: 1.15em;
-            line-height: 1.8;
+            font-size: 1em;
+            line-height: 1.6;
             color: #4a3426;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         
         .result-cta {
             background: #2c1810;
             color: #fff8f0;
-            padding: 20px;
+            padding: 15px;
             border-radius: 5px;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         
         .result-cta p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 600px) {
+            .quiz-overlay {
+                padding: 0;
+                align-items: flex-start;
+            }
+            
+            .quiz-modal {
+                border-radius: 0;
+                padding: 20px 15px;
+                max-height: 100vh;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .quiz-header h2 {
+                font-size: 1.3em;
+            }
+            
+            .quiz-header p {
+                font-size: 0.9em;
+            }
+            
+            .quiz-question p {
+                font-size: 1em;
+                margin-bottom: 12px;
+            }
+            
+            .quiz-option {
+                padding: 12px;
+                font-size: 0.9em;
+                margin-bottom: 8px;
+            }
+            
+            .quiz-option input {
+                margin-right: 8px;
+            }
+            
+            #quiz-container {
+                flex: 1;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 10px;
+            }
+            
+            .quiz-btn {
+                margin-top: 10px;
+                padding: 16px;
+                font-size: 1.1em;
+                position: relative;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            }
+            
+            #quiz-result h3 {
+                font-size: 1.2em;
+            }
+            
+            #result-text {
+                font-size: 0.95em;
+            }
+            
+            .result-cta {
+                padding: 12px;
+            }
+            
+            .result-cta p {
+                font-size: 0.9em;
+            }
+        }
+        
+        /* Touch-friendly adjustments */
+        @media (hover: none) and (pointer: coarse) {
+            .quiz-option {
+                padding: 14px;
+                margin-bottom: 12px;
+            }
+            
+            .quiz-option:hover {
+                transform: none;
+            }
+            
+            .quiz-option:active {
+                background: rgba(210, 105, 30, 0.1);
+            }
+            
+            .quiz-btn {
+                padding: 16px;
+            }
         }
         
         /* Main Content (Initially Blurred) */
@@ -499,8 +608,8 @@
     <div class="quiz-overlay" id="quizOverlay">
         <div class="quiz-modal">
             <div class="quiz-header">
-                <h2>Before We Begin...</h2>
-                <p>Let's make sure you get exactly what you need. Answer 5 quick questions to unlock your personalized guide.</p>
+                <h2>Quick Check-In...</h2>
+                <p>5 questions to get you the right help</p>
             </div>
             
             <div class="quiz-progress">
@@ -719,7 +828,7 @@
                 
                 <!-- Simple Stripe Payment Link Button -->
                 <div style="text-align: center; margin: 30px 0;">
-                    <a href="https://buy.stripe.com/aFaeVd09y8msa7y9fe2VG00" 
+                    <a href="https://buy.stripe.com/aFaeVd09y8msa7y9AA" 
                        class="btn-buy" 
                        style="display: inline-block; padding: 20px 50px; background: #8b4513; color: #fff8f0; border: none; border-radius: 3px; font-size: 1.3em; font-weight: bold; text-decoration: none; font-family: 'Georgia', serif; letter-spacing: 0.5px; transition: all 0.3s ease;">
                         Complete Purchase - $7
@@ -772,7 +881,7 @@
         let currentQuestion = 1;
         const totalQuestions = 5;
         
-        // Handle option selection
+        // Handle option selection with auto-advance
         document.querySelectorAll('.quiz-option').forEach(option => {
             option.addEventListener('click', function() {
                 // Remove selected class from all options in this question
@@ -783,18 +892,16 @@
                 this.classList.add('selected');
                 // Check the radio button
                 this.querySelector('input').checked = true;
+                
+                // Auto-advance after a short delay for visual feedback
+                setTimeout(() => {
+                    autoAdvance();
+                }, 400); // 400ms delay to show selection
             });
         });
         
-        function nextQuestion() {
+        function autoAdvance() {
             const currentQ = document.querySelector(`[data-question="${currentQuestion}"]`);
-            const selected = currentQ.querySelector('input[type="radio"]:checked');
-            
-            if (!selected) {
-                alert('Please select an answer to continue');
-                return;
-            }
-            
             currentQ.classList.remove('active');
             
             if (currentQuestion < totalQuestions) {
@@ -805,12 +912,24 @@
                 const progress = (currentQuestion / totalQuestions) * 100;
                 document.getElementById('progressBar').style.width = progress + '%';
                 
-                if (currentQuestion === totalQuestions) {
-                    document.getElementById('nextBtn').textContent = 'Get My Results & Access the Guide';
-                }
+                // Hide the next button during questions, show only on results
+                document.getElementById('nextBtn').style.display = 'none';
             } else {
                 showResults();
             }
+        }
+        
+        // Keep manual next button as backup (hidden by default now)
+        function nextQuestion() {
+            const currentQ = document.querySelector(`[data-question="${currentQuestion}"]`);
+            const selected = currentQ.querySelector('input[type="radio"]:checked');
+            
+            if (!selected) {
+                alert('Please select an answer to continue');
+                return;
+            }
+            
+            autoAdvance();
         }
         
         function showResults() {
@@ -843,10 +962,16 @@
             
             document.getElementById('result-text').textContent = resultText;
             document.getElementById('quiz-result').style.display = 'block';
+            
+            // Show the button only on results
+            document.getElementById('nextBtn').style.display = 'block';
             document.getElementById('nextBtn').textContent = 'Get Your Guide for $7 →';
             document.getElementById('nextBtn').onclick = function() {
                 closeQuiz();
             };
+            
+            // Update progress to 100%
+            document.getElementById('progressBar').style.width = '100%';
         }
         
         function closeQuiz() {
@@ -862,6 +987,12 @@
                 }, 500);
             }, 500);
         }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide next button initially since we're auto-advancing
+            document.getElementById('nextBtn').style.display = 'none';
+        });
     </script>
 </body>
 </html>
