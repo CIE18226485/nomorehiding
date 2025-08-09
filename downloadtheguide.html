@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - Your Guide is Ready!</title>
     
-    <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'YOUR-PIXEL-ID');
-    fbq('track', 'PageView');
-    fbq('track', 'Purchase', {value: 7.00, currency: 'USD'});
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=YOUR-PIXEL-ID&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
-    
     <style>
         * {
             margin: 0;
@@ -260,7 +241,7 @@
         <p class="subtitle">Your purchase was successful. Your guide is ready to download.</p>
         
         <div class="download-section">
-            <a href="/downloads/72-Hour Exit Plan for Toxic Relationships - Complete Guide.pdf" class="download-button" download>
+            <a href="/downloads/72-HourExitPlanforToxicRelationships-Complete Guide.pdf" class="download-button" download>
                 📥 Download Your Guide Now
             </a>
             <p class="download-note">Save this file to your device for future reference</p>
@@ -270,8 +251,8 @@
         setTimeout(function() {
             // This creates a backup download in case the button doesn't work
             const link = document.createElement('a');
-            link.href = '/downloads/72-Hour Exit Plan for Toxic Relationships - Complete Guide.pdf';
-            link.download = '72-Hour Exit Plan for Toxic Relationships - Complete Guide.pdf';
+            link.href = '/downloads/72-HourExitPlanforToxicRelationships-Complete Guide.pdf';
+            link.download = '72-HourExitPlanforToxicRelationships-Complete Guide.pdf';
             link.style.display = 'none';
             document.body.appendChild(link);
             link.click();
