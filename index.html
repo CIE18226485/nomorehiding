@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Ultimate Single Mom Dating Kit - Find Love Without the Games</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '729551359964453');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=729551359964453&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
     <style>
         * {
             margin: 0;
@@ -1204,19 +1223,86 @@
             // Add a nice animation before alert
             const button = event.target;
             button.style.transform = 'scale(0.95)';
+            
+            // Track Meta Pixel Purchase Event
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout', {
+                    value: 27.00,
+                    currency: 'USD',
+                    content_name: 'Single Mom Dating Kit',
+                    content_category: 'Digital Product',
+                    content_ids: ['SMDK-001'],
+                    num_items: 1
+                });
+            }
+            
             setTimeout(() => {
                 button.style.transform = '';
                 alert('Checkout would process here - taking you to secure payment!');
             }, 200);
         }
 
-        // Add parallax effect to hero on scroll
+        // Track scroll depth for Meta Pixel
+        let scrollTracked = {
+            25: false,
+            50: false,
+            75: false,
+            90: false
+        };
+
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
             if (hero && scrolled < window.innerHeight) {
                 hero.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
+
+            // Track scroll depth
+            const scrollPercentage = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+            
+            if (scrollPercentage > 25 && !scrollTracked[25]) {
+                scrollTracked[25] = true;
+                if (typeof fbq !== 'undefined') {
+                    fbq('trackCustom', 'ScrollDepth', {depth: '25%'});
+                }
+            }
+            if (scrollPercentage > 50 && !scrollTracked[50]) {
+                scrollTracked[50] = true;
+                if (typeof fbq !== 'undefined') {
+                    fbq('trackCustom', 'ScrollDepth', {depth: '50%'});
+                }
+            }
+            if (scrollPercentage > 75 && !scrollTracked[75]) {
+                scrollTracked[75] = true;
+                if (typeof fbq !== 'undefined') {
+                    fbq('trackCustom', 'ScrollDepth', {depth: '75%'});
+                }
+            }
+            if (scrollPercentage > 90 && !scrollTracked[90]) {
+                scrollTracked[90] = true;
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ViewContent', {
+                        content_name: 'Single Mom Dating Kit Full Page',
+                        content_category: 'Landing Page',
+                        value: 27.00,
+                        currency: 'USD'
+                    });
+                }
+            }
+        });
+
+        // Track CTA button clicks
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'AddToCart', {
+                        value: 27.00,
+                        currency: 'USD',
+                        content_name: 'Single Mom Dating Kit',
+                        content_type: 'product'
+                    });
+                }
+            });
         });
 
         // Add dynamic hearts on mouse move (desktop only)
