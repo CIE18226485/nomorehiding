@@ -576,8 +576,6 @@
 
         .new-price {
             color: var(--success);
-            animation: pulse 2s infinite;
-            text-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
         }
 
         /* Testimonials Enhanced */
@@ -625,7 +623,6 @@
             color: #ffd700;
             margin-bottom: 15px;
             font-size: clamp(16px, 3vw, 20px);
-            letter-spacing: 3px;
         }
 
         .testimonial-card p {
@@ -894,7 +891,7 @@
                 <p class="eyebrow">💔 For Single Moms Who Are Tired of Disappointing Dates & Lonely Nights…</p>
                 <h1>Discover the Proven Dating Framework That Helps Single Moms Attract the Right Partner</h1>
                 <p class="subhead">Finally, a simple, step-by-step roadmap designed specifically for single moms to build confidence, avoid heartbreak, and start attracting high-quality partners.</p>
-                <a href="#order" class="cta-button">
+                <a href="https://buy.stripe.com/test_YOURSTRIPELINK" class="cta-button" onclick="trackCheckout(event);">
                     Get Instant Access <span class="price-tag">Just $27</span>
                 </a>
             </div>
@@ -1135,7 +1132,7 @@
             <p>
                 You deserve love now. Every day you wait is another day without the partner you deserve. Start your transformation today.
             </p>
-            <a href="#" class="cta-button" onclick="handleCheckout(); return false;">
+            <a href="https://buy.stripe.com/test_YOURSTRIPELINK" class="cta-button" onclick="trackCheckout(event);">
                 Get Instant Access for Just $27 →
             </a>
             <p style="margin-top: 20px;">
@@ -1218,12 +1215,8 @@
         };
         setInterval(updateCountdown, 1000);
 
-        // Handle checkout
-        function handleCheckout() {
-            // Add a nice animation before alert
-            const button = event.target;
-            button.style.transform = 'scale(0.95)';
-            
+        // Track checkout click for Meta Pixel
+        function trackCheckout(event) {
             // Track Meta Pixel Purchase Event
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'InitiateCheckout', {
@@ -1235,11 +1228,13 @@
                     num_items: 1
                 });
             }
-            
-            setTimeout(() => {
-                button.style.transform = '';
-                alert('Checkout would process here - taking you to secure payment!');
-            }, 200);
+            // Let the link proceed to Stripe
+        }
+
+        // Handle checkout (deprecated - now using Stripe links)
+        function handleCheckout() {
+            // This function is kept for backwards compatibility
+            window.location.href = 'https://buy.stripe.com/test_YOURSTRIPELINK';
         }
 
         // Track scroll depth for Meta Pixel
